@@ -1,0 +1,27 @@
+{% extends "master.html" %}
+{% block title %}
+	Hackening
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form action="" method="post">{% csrf_token %}
+                {{ form.as_p }}
+            <input type="submit" class="btn btn-block btn-success" value="Submit">
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!--finaliza el bloque content-->
+<!--heredamos el bloque footer-->
+{% block footer %}
+	 <div class="navbar navbar-inverse navbar-fixed-bottom">
+	 	<center style="padding-top: 12px">
+	 		<small style="color: #fff">Footer Form</small>
+	    </center>
+	</div>
+{% endblock %}
+<!--finaliza el bloque footer-->

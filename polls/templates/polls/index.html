@@ -1,0 +1,119 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <title>Es mejor una pregunta güevona que un güevón que no pregunta...</title>
+<!--        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+
+<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+
+<!--	<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>-->
+
+<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+<!--	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+
+
+	<script src="{% static 'polls/moment.js' %} "></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker-standalone.css">
+<link rel="" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+
+<!--	<link rel="stylesheet" href="{% static 'polls/bootstrap/css/bootstrap.css' %} ">
+	<script src="{% static 'polls/bootstrap/js/bootstrap.js' %} "></script>-->
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.4/js/bootstrap-datetimepicker.min.js"></script>-->
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.4/js/bootstrap-datetimepicker.min.js"></script>-->
+
+
+
+<!--  <script>
+  $(function() {
+    $( ".datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1900:2016",
+      // You can put more options here.
+
+    });
+  });
+  </script> -->
+
+<!--<script>
+    $( '#id_pub_date' ).datepicker();
+</script>-->
+
+
+
+    </head>
+
+  <body>
+        <div class="page-header">
+            <h1><a href="/">GüevónAPP</a></h1>
+        </div>
+	<div id="content">
+		{% block content %}
+		<div class="post">
+			{% if latest_question_list %}
+			<ul>
+				{% for question in latest_question_list %}
+				<li>
+					 <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+				</li>
+			{% endfor %}
+			</ul>			
+			{% else %}
+				<p>No polls are available.</p>
+			{% endif %}
+		</div>
+		<a href="{% url 'polls:nueva' %}">¿Qué otra güevonada desea sumercé preguntar?: </a>
+		{% endblock %}
+	</div>
+
+<!--<script type="text/javascript">
+            $(function () {
+                $('#id_pub_date').datetimepicker();
+            });
+</script>-->
+
+    </body>
+
+<!--	<link rel="stylesheet" href="{% static 'polls/datetimepicker/jquery.datetimepicker.css' %} ">
+
+	<script src="{% static 'polls/datetimepicker/jquery.js' %} "></script>
+	<script src="{% static 'polls/datetimepicker/jquery.datetimepicker.full.min.js' %} "></script>-->
+
+</html>
+
+
+

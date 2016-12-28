@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- bloque de contenido para el título-->
+    <title>Crud con Python y Django | {% block title %}Página principal{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="header">
+        <!-- bloque de contenido para el menú-->
+        {% block header %}
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'crud1:list_hackenings' %}">Hackenings</a>
+                    <a class="navbar-brand" href="{% url 'crud1:add_hackening' %}">Nuevo Hackening</a>
+                </div>
+            </nav>
+        {% endblock %}
+    </div>
+    <div class="container">
+        <!-- bloque de contenido para el contenido de la página-->
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <!-- bloque de contenido para el footer-->
+        {% block footer %}{% endblock %}
+    </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Más vale una pregunta güevona que un güevón que no pregunta...') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Hp administración!!!!</a></h1>
+{% endblock %}

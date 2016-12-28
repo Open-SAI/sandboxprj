@@ -1,0 +1,37 @@
+{% extends 'polls/index.html' %}
+
+{% block content %}
+
+<h1>{{ question.question_text }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="" method="post">
+	{% csrf_token %}
+<table >
+	{{ form.as_table }}
+</table>
+<div class="form-group">
+	<input type="submit" value="Guardar" class="btn btn-primary"/>
+</div>
+</form>
+
+<!--<script type="text/javascript">
+            $(function () {
+                $('#id_pub_date').datetimepicker();
+            });
+</script>-->
+ <script>
+  $(function() {
+    $( "#id_pub_date" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1900:2016",
+      dateFormat: 'yy-mm-dd',
+      // You can put more options here.
+
+    });
+  });
+  </script>
+
+{% endblock %}
