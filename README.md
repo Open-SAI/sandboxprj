@@ -1,4 +1,4 @@
-## Set.up Log...
+## Setup
 - *mkdir myworkfolder*
 - *git clone https://github.com/Open-SAI/sandboxprj.git*
 
