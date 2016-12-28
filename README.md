@@ -16,5 +16,7 @@ It create a *sandboxprj* folder in your *myworkfolder*, we need the python envir
  - *python manage.py migrate*
  - *python manage.py runserver*
 
-If no errors, go to your web browser and look up the default django url: http://localhost:8000. There is an page error, but is the default configuration, add */crud1* to see the hackenings app (the less buggy software in this repo :grin:)
+If no errors, go to your web browser and look up the default django url: http://localhost:8000. There is an page error, but is the default configuration, add */crud1* to see the hackenings app (the less buggy software in this repo :grin:).
+
+Use "ctrl+c" to stop the server, and you can go out from the virtualenv with the *deactivate* command.
   
