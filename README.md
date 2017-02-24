@@ -35,16 +35,16 @@ It create a *sandboxprj* folder in your *myworkfolder*, we need the python envir
 
  - *$ apt install python3*
  - *$ apt install python3-pip*
- - *$ pip install virtualenv*
+ - *$ pip3 install virtualenv*
 
 2. Next as normal user in our "myworkfolder" created previously:
  - *$ virtualenv /../myworkfolder/*
- - *cd myworkfolder*
- - *source /bin/activate*
- - *pip install Django*
- - *pip install django-datetime-widget*
- - *cd sandboxprj*
- - *python manage.py migrate*
- - *python manage.py runserver*
+ - *$ cd myworkfolder*
+ - *$ source /bin/activate*
+ - *$ pip3 install Django*
+ - *$ pip3 install django-datetime-widget*
+ - *$ cd sandboxprj*
+ - *$ python manage.py migrate*
+ - *$ python manage.py runserver*
 
 If no errors, go to your web browser and look up the default django url: http://localhost:8000. There is an page error, but is the default configuration, to the url add */crud1* to see the hackenings app (the less buggy experiment in this repo :grin:).
